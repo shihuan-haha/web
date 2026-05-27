@@ -56,7 +56,7 @@ def ex48():
 def predict():
 x = int(request.form["x"]) # Take data from form
 result = x * 2
-return render_template("index.html", result=result) # 
+    return render_template("index.html", result=result) # 
 update the result
 
 
