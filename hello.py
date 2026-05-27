@@ -51,3 +51,19 @@ def page_list():
 # 🎯 Render 雲端部署必備：讓伺服器監聽正確的連接埠 (Port)
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
+
+from flask import Flask, request, render_template
+app = Flask(__name__)
+# Display input page
+@app.route("/")
+def index():
+return render_template("index.html")
+# process the submission
+@app.route("/predict", methods=["POST"])
+def predict():
+x = int(request.form["x"]) # Take data from form
+result = x * 2
+return render_template("index.html", result=result) # 
+update the result
+if __name__ == "__main__":
+app.run(debug=True)
