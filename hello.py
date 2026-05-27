@@ -2,6 +2,18 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route('/Hello')
+def home():
+    return render_template('Hello.html')
+    
+@app.route('/Jenny')
+def home():
+    return render_template('Jenny.html')
+
+@app.route('/index')
+def home():
+    return render_template('index.html')
+
 # 🎯 Exercise 41: 基礎路由與 HTML 範本
 @app.route('/home')
 def home():
