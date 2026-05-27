@@ -49,8 +49,8 @@ def page_list():
 
 # Display input page
 @app.route("/ex48")
-def index():
-return render_template("ex48.html")
+def ex48():
+    return render_template("ex48.html")
 # process the submission
 @app.route("/predict", methods=["POST"])
 def predict():
