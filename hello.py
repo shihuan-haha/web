@@ -14,9 +14,6 @@ def Jenny():
 def index():
     return render_template('index.html')
 
-@app.route('/ex48')
-def ex48():
-    return render_template('ex48.html')
     
 # 🎯 Exercise 41: 基礎路由與 HTML 範本
 @app.route('/home')
@@ -53,11 +50,11 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
 
 
-app = Flask(__name__)
+
 # Display input page
-@app.route("/")
+@app.route("/ex48")
 def index():
-return render_template("index.html")
+return render_template("ex48.html")
 # process the submission
 @app.route("/predict", methods=["POST"])
 def predict():
