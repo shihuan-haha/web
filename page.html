@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template - Page</title>
+</head>
+<body>
+    <h1>Template - Page </h1>
+    <h2>{{text}}</h2> 
+
+    {% if x != undefined %}
+        <h2>User Info :</h2>
+        <p>Name : {{ x.name }}</p>
+        <p>Age : {{ x.age }}</p>
+        <p>City : {{ x.city }}</p>
+    {% endif %}
+</body>
+</html>
