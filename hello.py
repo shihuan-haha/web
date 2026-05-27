@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -46,18 +46,17 @@ def page_list():
     return render_template('page_list.html', user_list=users)
 
 
-
-# Display input page
+# 🎯 Exercise 48: Display input page
 @app.route("/ex48")
 def ex48():
     return render_template("ex48.html")
-# process the submission
+
+# 🎯 Exercise 48: process the submission
 @app.route("/predict", methods=["POST"])
 def predict():
     x = int(request.form["x"]) # Take data from form
     result = x * 2
-    return render_template("index.html", result=result) # 
-update the result
+    return render_template("ex48.html", result=result) # update the result
 
 
 # 🎯 Render 雲端部署必備：讓伺服器監聽正確的連接埠 (Port)
