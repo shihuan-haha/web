@@ -3,19 +3,19 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/Hello')
-def home():
+def Hello():
     return render_template('Hello.html')
     
 @app.route('/Jenny')
-def home():
+def Jenny():
     return render_template('Jenny.html')
 
 @app.route('/index')
-def home():
+def index():
     return render_template('index.html')
 
 @app.route('/ex48')
-def home():
+def ex48():
     return render_template('ex48.html')
     
 # 🎯 Exercise 41: 基礎路由與 HTML 範本
