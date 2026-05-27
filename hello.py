@@ -45,10 +45,6 @@ def page_list():
     ]
     return render_template('page_list.html', user_list=users)
 
-# 🎯 Render 雲端部署必備：讓伺服器監聽正確的連接埠 (Port)
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
-
 
 
 # Display input page
@@ -62,5 +58,13 @@ x = int(request.form["x"]) # Take data from form
 result = x * 2
 return render_template("index.html", result=result) # 
 update the result
+
+
+# 🎯 Render 雲端部署必備：讓伺服器監聽正確的連接埠 (Port)
 if __name__ == "__main__":
-app.run(debug=True)
+    app.run(host="0.0.0.0", port=10000)
+
+
+
+
+
