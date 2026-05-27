@@ -54,8 +54,8 @@ def ex48():
 # process the submission
 @app.route("/predict", methods=["POST"])
 def predict():
-x = int(request.form["x"]) # Take data from form
-result = x * 2
+    x = int(request.form["x"]) # Take data from form
+    result = x * 2
     return render_template("index.html", result=result) # 
 update the result
 
