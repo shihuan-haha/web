@@ -14,6 +14,10 @@ def home():
 def home():
     return render_template('index.html')
 
+@app.route('/ex48')
+def home():
+    return render_template('ex48.html')
+    
 # 🎯 Exercise 41: 基礎路由與 HTML 範本
 @app.route('/home')
 def home():
